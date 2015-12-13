@@ -1,5 +1,5 @@
 # Generated files
-target/
+build/
 .idea/
 .DS_Store
 
