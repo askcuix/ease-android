@@ -1,2 +1,3 @@
 # ease-android
-Ease for develop android application.
+
+Common library for speed android development.
