@@ -1,6 +1,16 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 apply plugin: 'java'
 
+configurations {
+    provided
+}
+
+sourceSets {
+    main {
+        compileClasspath += configurations.provided
+    }
+}
+
 repositories {
     mavenLocal()
     maven { url "http://repo.maven.apache.org/maven2" }
@@ -8,8 +18,8 @@ repositories {
 }
 
 dependencies {
-    compile 'com.google.android:android:4.1.1.4'
-    compile files('lib/support-v4-19.1.0.jar')
+    provided 'com.google.android:android:4.1.1.4'
+    provided files('lib/support-v4-19.1.0.jar')
 }
 
 tasks.withType(JavaCompile) {
